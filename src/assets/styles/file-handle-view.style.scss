@@ -1,0 +1,81 @@
+@import './base.scss';
+
+.header-container{
+    overflow: hidden;
+    height: 60px;
+}
+
+.header-container img{
+    margin: 10px 0 0 30px;
+}
+
+.title-container{
+    text-align: center;
+}
+
+.errors-container{
+    text-align: left;
+}
+
+.errors-container ul{
+    list-style-type: none;
+    margin-left: -20px;
+}
+
+.container{
+    margin: 0 auto;
+    padding: 20px;
+    width: 95%;
+    height: 100%;
+    background-color: $color-grey;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.container hr{
+    margin: 30px 0 30px 0;
+}
+
+.container .files-list{
+    list-style: none;
+    margin-left: -40px;
+    margin-right: 20px;
+}
+
+.container .files-list li {
+    border: 1px solid $color-grey-two;
+    border-radius: 5px;
+    background-color: white;
+    padding: 15px;
+    margin: 10px;
+}
+
+.container .files-list li label {
+    display: block;
+    word-wrap: break-word;
+}
+
+.container .directories-list{
+    position: relative;
+    list-style: none;
+    margin-left: -50px;
+}
+
+.container .directories-list li {
+    border: 1px solid $color-grey-two;
+    border-radius: 5px;
+    background-color: white;
+    padding: 15px;
+    margin: 10px;
+    width: 95%;
+}
+
+.container .directories-list li label {
+    display: block;
+    word-wrap: break-word;
+}
+
+.container .directories-list li .radiobutton-container{
+    font-size: 15px;
+    padding-top: 3px;
+}

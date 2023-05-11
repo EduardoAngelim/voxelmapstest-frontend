@@ -1,0 +1,1 @@
+export enum FileHandleTypeEnum { Copy = 0, Move = 1, None = 2 }

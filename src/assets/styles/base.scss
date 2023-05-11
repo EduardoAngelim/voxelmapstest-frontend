@@ -1,0 +1,205 @@
+$color-one: #007DA7;
+$color-two: #003458;
+$color-three: #00A8E9;
+$color-button: #05A8E9;
+$color-button-hover: #2fc4ff;
+$color-font: #3C3E42;
+$color-grey: #F5F8FA;
+$color-grey-two: #ccc;
+$color-grey-three: #eee;
+
+body {
+  margin: 0;
+  min-height: 100%;
+  background-color: white;
+  font-family: Arial,sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-font;
+}
+
+.default-btn {
+  width: 240px;
+  height: 56px;
+  max-height: 56px;
+  min-height: 56px;
+  margin-top: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 9999px;
+  background-color: $color-button;
+  font-family: Poppins, sans-serif;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  -o-object-fit: fill;
+  object-fit: fill;
+  border: 0;
+  line-height: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.default-btn:hover {
+  background-color: $color-button-hover;
+  color: white;
+}
+
+/* CUSTOM CHECKBOX */
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  padding-top: 3px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: $color-grey-three;
+  border-radius: 5px;
+}
+
+.checkbox-container:hover input ~ .checkbox-checkmark {
+  background-color: $color-grey-two;
+}
+
+.checkbox-container input:checked ~ .checkbox-checkmark {
+  background-color: $color-button;
+}
+
+.checkbox-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkbox-checkmark:after {
+  display: block;
+}
+
+.checkbox-container .checkbox-checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid $color-grey;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* CUSTOM RADIOBUTTON */
+.radiobutton-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.radiobutton-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radiobutton-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.radiobutton-container:hover input ~ .radiobutton-checkmark {
+  background-color: #ccc;
+}
+
+.radiobutton-container input:checked ~ .radiobutton-checkmark {
+  background-color: #2196F3;
+}
+
+.radiobutton-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radiobutton-container input:checked ~ .radiobutton-checkmark:after {
+  display: block;
+}
+
+.radiobutton-container .radiobutton-checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+/* CUSTOM MODAL */
+.modal {
+  position: fixed;
+  z-index: 1;
+  padding-top: 200px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 5px;
+  width: 30%;
+  height: 300px;
+  text-align: center;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
